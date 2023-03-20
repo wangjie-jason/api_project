@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>超炫酷jQuery和CSS3登录界面设计|DEMO_jQuery之家-自由分享jQuery、html5、css3的插件库</title>
+	<link rel="stylesheet" type="text/css" href="assets/css/demo.css" />
+</head>
+<body>
+	<!-- coidea:loader START -->
+    <div class="loader">
+      <div class="lds-ripple">
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+    <!-- coidea:loader END -->
+
+    <!-- coidea:header START -->
+    <header>
+      <div class="header-inner">
+        <div class="logo">
+          <a href="http://www.htmleaf.com/"><span>jQuery之家</span></a>
+        </div>
+        <nav class="navigation">
+          <li><a href="http://www.htmleaf.com/jQuery/Layout-Interface/201904095600.html"><span>Article</span></a></li>
+          <li><a href="https://github.com/COIDEAwebsite/interactive-modal-with-funny-animations" target="_blank"><span>Github</span></a></li>
+          <li><a href="http://www.htmleaf.com/"><span>jQuery</span></a></li>
+        </nav>
+      </div>
+    </header>
+    <!-- coidea:header END -->
+
+    <!-- COIDEA:modal START -->
+    <div class="modal invisible">
+      
+      <!-- COIDEA:modal:monster (open-close) START -->
+      <div class="monster-open-close" style="background-image: url(assets/img/m-open-close.png)"></div>
+      <!-- COIDEA:modal:monster (open-close) END -->
+      
+      <!-- COIDEA:modal:inner START -->
+      <div class="modal-inner" style="background-image: url(assets/img/landscape.png);">
+        
+        <!-- COIDEA:modal:inner:close START -->
+        <p class="close"><span></span></p>
+        <!-- COIDEA:modal:inner:close END -->
+        
+        <!-- COIDEA:modal:inner:body START -->
+        <div class="modal-body">
+          
+          <!-- COIDEA:modal:inner:body:monster (close) START -->
+          <div class="monster-close" style="background-image: url(assets/img/m-close.png)"><span>Are you sure?</span></div>
+          <!-- COIDEA:modal:inner:body:monster (close) END -->
+          
+          <h2>Stay up-to-date with our campaign</h2>
+          
+          <ul>
+            <li>Latest news</li>
+            <li>Promise no spam!</li>
+          </ul>
+
+          <!-- COIDEA:modal:inner:body:form START -->
+          <div class="form">
+            <div class="form-holder">
+
+              <div class="monster-signup"><span style="background-image: url(assets/img/m-signup.png)"></span></div>
+
+              <div class="form-holder-inner">
+                <form>
+                  <div class="group">
+                    <input type="text" name="email" id="email" placeholder="Your email" autocomplete="off" required>
+                  </div>
+
+                  <div class="submit">
+                    <input type="submit" class="submit-btn" value="Sign up" disabled="disabled">
+                  </div>
+                </form>
+                <div class="thank-you-holder">
+                  <span>Thank You, Human!</span>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+          <!-- COIDEA:modal:inner:body:form END -->
+
+        </div>
+        <!-- COIDEA:modal:inner:body END -->
+        
+      </div>
+      <!-- COIDEA:modal:inner END -->
+      
+    </div>
+    <!-- COIDEA:modal END -->
+
+    <!-- COIDEA:trigger START -->
+    <section class="trigger">
+      <h1>Stay up-to-date with our campaign</h1>
+      <button id="button">SIGN UP</button>
+    </section>
+    <!-- COIDEA:trigger END -->
+
+    <script src="assets/js/jquery-1.11.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+    <script src="https://unpkg.com/imagesloaded@4.1.4/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/js/demo.js"></script>
+</body>
+</html>

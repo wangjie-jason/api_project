@@ -1,0 +1,122 @@
+{
+	"info": {
+		"_postman_id": "b46c4000-1628-4230-b495-2a31e7039096",
+		"name": "接口文件夹",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "第一个接口",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "h1",
+						"value": "1",
+						"type": "default"
+					},
+					{
+						"key": "h2",
+						"value": "2",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://www.aaaa.com:8000/a/b/c/?a=1&b=2",
+					"protocol": "http",
+					"host": [
+						"www",
+						"aaaa",
+						"com"
+					],
+					"port": "8000",
+					"path": [
+						"a",
+						"b",
+						"c",
+						""
+					],
+					"query": [
+						{
+							"key": "a",
+							"value": "1"
+						},
+						{
+							"key": "b",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "第二哥接口",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "a",
+							"value": "1",
+							"type": "default"
+						},
+						{
+							"key": "b",
+							"value": "2",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://bbb.com/b/d/f/",
+					"protocol": "http",
+					"host": [
+						"bbb",
+						"com"
+					],
+					"path": [
+						"b",
+						"d",
+						"f",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://cccc.com/b/d/f/",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "abceaddad",
+					"options": {
+						"raw": {
+							"language": "javascript"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://cccc.com/b/d/f/",
+					"protocol": "http",
+					"host": [
+						"cccc",
+						"com"
+					],
+					"path": [
+						"b",
+						"d",
+						"f",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

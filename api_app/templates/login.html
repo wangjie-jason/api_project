@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>接口测试平台登录</title>
+    <link rel="shortcut icon" href="/static/favicon.ico" />
+	<link rel="stylesheet" type="text/css" href="/static/wqrf_login_css/assets/css/demo.css" />
+</head>
+<body>
+	<!-- coidea:loader START -->
+    <div class="loader">
+      <div class="lds-ripple">
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+    <!-- coidea:loader END -->
+    <!-- coidea:header START -->
+    <header>
+      <div class="header-inner">
+        <div class="logo">
+          <a href="javascript:alert('请在钉钉联系xxx')"><span>联系管理员</span></a>
+        </div>
+        <nav class="navigation">
+          <li><a href="/admin/" target="_blank"><span>后台管理</span></a></li>
+          <li><a href="/help/" target="_blank"><span>帮助</span></a></li>
+        </nav>
+      </div>
+    </header>
+    <!-- coidea:header END -->
+
+    <!-- COIDEA:modal START -->
+    <div class="modal invisible">
+      
+      <!-- COIDEA:modal:monster (open-close) START -->
+      <div class="monster-open-close" style="background-image: url(/static/wqrf_login_css/assets/img/m-open-close.png)"></div>
+      <!-- COIDEA:modal:monster (open-close) END -->
+      
+      <!-- COIDEA:modal:inner START -->
+      <div class="modal-inner" style="background-image: url(/static/wqrf_login_css/assets/img/landscape.png);">
+        
+        <!-- COIDEA:modal:inner:close START -->
+        <p class="close"><span></span></p>
+        <!-- COIDEA:modal:inner:close END -->
+        
+        <!-- COIDEA:modal:inner:body START -->
+        <div class="modal-body">
+          
+          <!-- COIDEA:modal:inner:body:monster (close) START -->
+          <div class="monster-close" style="background-image: url(/static/wqrf_login_css/assets/img/m-close.png)"><span>Are you sure?</span></div>
+          <!-- COIDEA:modal:inner:body:monster (close) END -->
+          
+          <h2>接口测试平台 请登录</h2>
+          
+          <ul>
+              {% for i in notices %}
+                  <li>{{ i.content }}</li>
+              {% endfor %}
+          </ul>
+
+          <!-- COIDEA:modal:inner:body:form START -->
+          <div class="form">
+            <div class="form-holder">
+
+              <div class="monster-signup"><span style="background-image: url(/static/wqrf_login_css/assets/img/m-signup.png)"></span></div>
+
+              <div class="form-holder-inner">
+                <form id="form_id" action="" method="">
+                  <div class="group">
+                    <input type="text" style="border-bottom: 1px solid #e5e5e5" name="username" id="username" placeholder="请输入用户名" autocomplete="off" required>
+                    <input type="password" name="password" id="password" placeholder="请输入密码" autocomplete="off" required>
+                  </div>
+
+                  <div class="submit">
+                    <input onclick="login()" type="submit" class="submit-btn" value="登录" disabled="disabled">
+                    <input onclick="register()" type="submit" style="top:65px;background-color: teal" class="submit-btn" value="注册" disabled="disabled">
+                  </div>
+                </form>
+                  
+                <div class="thank-you-holder">
+                  <span>正在执行...</span>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+          <!-- COIDEA:modal:inner:body:form END -->
+
+        </div>
+        <!-- COIDEA:modal:inner:body END -->
+        
+      </div>
+      <!-- COIDEA:modal:inner END -->
+      
+    </div>
+    <!-- COIDEA:modal END -->
+
+    <!-- COIDEA:trigger START -->
+    <section class="trigger">
+      <h1>接口测试平台</h1>
+        <h4 style="text-align:center;color: red">{{ message }}</h4>
+      <button id="button">开始使用</button>
+    </section>
+    <!-- COIDEA:trigger END -->
+
+    <script src="/static/wqrf_login_css/assets/js/jquery-1.11.0.min.js"></script>
+
+    <script src="/static/greensock-js/src/minified/TweenMax.min.js"></script>
+
+    <script src="https://unpkg.com/imagesloaded@4.1.4/imagesloaded.pkgd.min.js"></script>
+    <script src="/static/wqrf_login_css/assets/js/demo.js"></script>
+
+
+
+    <script>
+        function login() {
+            document.getElementById('form_id').action = '/login_action/' ;
+            document.getElementById('form_id').method = 'post';
+            document.getElementById('form_id').submit();
+        }
+        function register() {
+            document.getElementById('form_id').action = '/register_action/' ;
+            document.getElementById('form_id').method = 'get';
+            document.getElementById('form_id').submit();
+        }
+        
+    </script>
+</body>
+</html>
